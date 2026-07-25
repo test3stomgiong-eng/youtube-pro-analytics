@@ -1,0 +1,6 @@
+{
+  "name": "YouTube Pro Analytics",
+  "description": "Professional real-time YouTube channel analytics, mathematical scoring engine, and Gemini AI audit platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

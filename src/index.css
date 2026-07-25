@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@media print {
+  .no-print, header, nav, button, footer {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  #user-guide-print-area, #export-report-print-area {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  #user-guide-print-area *, #export-report-print-area * {
+    color: #000000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #cccccc !important;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000000 !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
